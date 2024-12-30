@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unique Colorful Card</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #f6d365, #fda085);
+      }
+
+      .card {
+        width: 400px;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(145deg, #85ffbd, #fffb7d);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        top: -50px;
+        left: -50px;
+        width: 150px;
+        height: 150px;
+        background: radial-gradient(circle, #ff9a9e, #fad0c4);
+        border-radius: 50%;
+        z-index: 0;
+        animation: rotate 5s linear infinite;
+      }
+
+      .card::after {
+        content: "";
+        position: absolute;
+        bottom: -60px;
+        right: -60px;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(circle, #fbc2eb, #a6c1ee);
+        border-radius: 50%;
+        z-index: 0;
+        animation: rotate-reverse 8s linear infinite;
+      }
+
+      .content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: #333;
+      }
+
+      .content h1 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+      }
+
+      .content p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        line-height: 1.5;
+        font-family: cursive;
+        text-align: justify;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 25px;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        color: #fff;
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      .btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="content">
+        <h1>Discover Endless Possibilities</h1>
+        <p>
+          Welcome to your next adventure! Dive into a world of creativity and
+          innovation. Whether you're exploring new ideas or unlocking potential,
+          this is your starting point.
+        </p>
+        <a href="#" class="btn">Get Started</a>
+      </div>
+    </div>
+  </body>
+</html>
